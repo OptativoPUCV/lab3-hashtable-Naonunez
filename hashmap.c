@@ -56,8 +56,10 @@ HashMap * createMap(long capacity) {
   Mapa ->buckets = (Pair**) malloc (sizeof(Pair*)*capacity);
 
   Mapa->size = 0;
+  Mapa->capacity = capacity;
+  Mapa->current = -1;
 
-    return NULL;
+    return Mapa;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
