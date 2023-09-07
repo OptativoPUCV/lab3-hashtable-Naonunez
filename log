@@ -73,3 +73,9 @@ hashmap.c:46:12: error: unused variable ‘current’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b5f7cec
+Thu 07 Sep 2023 06:38:33 PM UTC: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  2|5
+total_score: 20/70
+c308b4f
