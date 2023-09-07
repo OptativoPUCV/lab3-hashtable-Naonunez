@@ -45,7 +45,9 @@ void insertMap(HashMap * map, char * key, void * value) {
   Nuevo->key = strdup(key);
   Nuevo->value = value;
 
-  
+  if (map->buckets[i] == NULL){
+    map->buckets[i]=Nuevo;
+  }
 
 
 }
