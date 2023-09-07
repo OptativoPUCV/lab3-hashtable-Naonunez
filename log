@@ -62,3 +62,14 @@ Thu 07 Sep 2023 06:30:11 PM UTC:
  tests:  2|5
 total_score: 20/70
 fd16e48
+Thu 07 Sep 2023 06:36:36 PM UTC: 
+ hashmap.c | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:12: error: unused variable ‘current’ [-Werror=unused-variable]
+   46 |     Pair * current = map->buckets[i];
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b5f7cec
