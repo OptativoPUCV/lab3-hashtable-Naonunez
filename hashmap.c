@@ -48,6 +48,9 @@ void insertMap(HashMap * map, char * key, void * value) {
   if (map->buckets[i] == NULL){
     map->buckets[i]=Nuevo;
   }
+  else{
+    Nuevo = map->buckets[i];
+  }
 
   map->size++;
 }
