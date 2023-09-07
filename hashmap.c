@@ -56,7 +56,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     i=(i+1) % map->capacity;
     
     aux = map->buckets[i];
-    if (i== copia){
+    if (i == copia){
       return;
     }
   }
@@ -101,7 +101,17 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key) { 
+  long i = hash(key, map->capacity);
+  long contador=0;
+   
+  while( contador < map->capacity){
+    if (map->buckets[i] != NULL && is_equal(map->buckets[i], key)){
+      map->current= i;
+      
+    }
+    contador++;
+  }
 
 
     return NULL;
