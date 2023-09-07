@@ -41,7 +41,7 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
   long i = hash(key, map->capacity);
-  long copia= i; 
+  //long copia = i; 
 
   Pair* aux = map->buckets[i];
   while(1){
@@ -56,9 +56,9 @@ void insertMap(HashMap * map, char * key, void * value) {
     i=(i+1) % map->capacity;
     
     aux = map->buckets[i];
-    if (i == copia){
+    /*if (i == copia){
       return;
-    }
+    }*/
   }
   
 
