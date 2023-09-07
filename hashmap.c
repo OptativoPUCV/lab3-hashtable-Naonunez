@@ -46,8 +46,8 @@ void insertMap(HashMap * map, char * key, void * value) {
   Pair* aux = map->buckets[i];
   while(1){
     if ((aux == NULL) || (aux->key==NULL)){
-      map->buckets[i]-> key = key;
-      map->buckets[i]-> value = value;
+      Pair* Dato= createPair(key, value);
+      map->buckets[i]= Dato;
       map->current= i;
       map->size++;
       return;
