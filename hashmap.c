@@ -108,8 +108,10 @@ Pair * searchMap(HashMap * map,  char * key) {
   while( contador < map->capacity){
     if (map->buckets[i] != NULL && is_equal(map->buckets[i], key)){
       map->current= i;
+      return map->buckets[i];
       
     }
+    i= (i+1) % map->capacity;
     contador++;
   }
 
