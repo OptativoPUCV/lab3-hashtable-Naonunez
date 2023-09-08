@@ -93,7 +93,19 @@ HashMap * createMap(long capacity) {
     return Mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) { 
+  long i = hash(key, map->capacity);
+  long contador = 0;
+
+  while( contador < map->capacity){
+    if (map->buckets[i] != NULL && is_equal(map->buckets[i]->key, key)){
+      map->buckets[i]->key=NULL;
+
+      map->size--;
+    }
+    i=(i+1) % map->capacity;
+    contador++;
+  }
 
 
 }
