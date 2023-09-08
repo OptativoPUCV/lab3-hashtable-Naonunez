@@ -102,6 +102,7 @@ void eraseMap(HashMap * map,  char * key) {
       map->buckets[i]->key=NULL;
 
       map->size--;
+      return;
     }
     i=(i+1) % map->capacity;
     contador++;
